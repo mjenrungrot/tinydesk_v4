@@ -1,0 +1,4 @@
+interface:
+  display_name: "Commit"
+  short_description: "Run repo-aware git commits with Conventional Commits checks."
+  default_prompt: "Use $commit to prepare and validate a repository commit with checks and push."

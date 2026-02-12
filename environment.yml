@@ -48,13 +48,13 @@ dependencies:
       - torchdiffeq
       - transformers>=4.54.0
       - timm
-      - decord
+      - decord; platform_system != "Darwin"
       - pycocotools
       - psutil
       - xformers; platform_system != "Darwin"
       - tqdm>=4.67.1
       - diffq>=0.2.1
-      - dacvae @ git+https://github.com/facebookresearch/dacvae.git
+      - dacvae @ git+https://github.com/facebookresearch/dacvae.git; python_version < "3.13"
       - onnxruntime>=1.17.0
       - opencv-contrib-python>=4.8.0
       - rtmlib==0.0.13
