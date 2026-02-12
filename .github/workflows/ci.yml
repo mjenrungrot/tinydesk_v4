@@ -1,0 +1,42 @@
+name: tinydesk_v4 CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install tooling
+        run: |
+          python -m pip install --upgrade pip
+          pip install --no-cache-dir ruff pytest
+
+      - name: Validate bootstrap script syntax
+        run: bash -n scripts/bootstrap_venv.sh
+
+      - name: Check workflow-ready test/testability files
+        run: |
+          if find . -name "*_test.py" -o -name "test_*.py" | grep -q .; then
+            ruff check .
+            python -m pytest -q --maxfail=1
+          else
+            echo "No Python test files present; skipping ruff/pytest execution."
+          fi
+
+      - name: Ruff version
+        run: ruff --version
