@@ -1,0 +1,11 @@
+hypotheses:
+  - id: h1
+    status: open
+    title: "Augmentation X improves metric Y"
+    success_metric: "val_accuracy"
+    target_delta: 0.02
+experiments:
+  - id: e1
+    hypothesis_id: h1
+    status: open
+    iteration_id: "<ITERATION_ID>"

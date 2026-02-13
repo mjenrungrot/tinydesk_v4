@@ -1,0 +1,6 @@
+test_command: "./venv/bin/python -m pytest"
+dry_run_command: "./venv/bin/python -m tinydesk_v4.train --config experiments/<ITERATION_ID>/design.yaml --dry-run"
+require_tests: false
+require_dry_run: true
+require_env_smoke: true
+require_docs_target_update: true

@@ -1,0 +1,10 @@
+{
+  "status": "needs_retry",
+  "blocking_findings": [],
+  "required_checks": {
+    "tests": "skip",
+    "dry_run": "fail",
+    "schema": "pass"
+  },
+  "reviewed_at": "1970-01-01T00:00:00Z"
+}

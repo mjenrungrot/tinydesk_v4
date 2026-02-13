@@ -1,0 +1,9 @@
+{
+    "iteration_id": "<ITERATION_ID>",
+    "stage": "hypothesis",
+    "stage_attempt": 0,
+    "last_run_id": null,
+    "sync_status": "pending",
+    "max_stage_attempts": 5,
+    "max_total_iterations": 50
+}

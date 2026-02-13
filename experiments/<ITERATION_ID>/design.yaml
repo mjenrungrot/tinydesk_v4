@@ -1,0 +1,17 @@
+id: e1
+iteration_id: <ITERATION_ID>
+hypothesis_id: h1
+
+entrypoint:
+  module: tinydesk_v4.train
+
+compute:
+  location: local
+
+metrics:
+  primary: val_accuracy
+  success_delta: 0.02
+
+baselines:
+  - name: baseline_current
+    config_overrides: {}

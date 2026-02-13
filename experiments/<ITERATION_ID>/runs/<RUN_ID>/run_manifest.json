@@ -1,0 +1,16 @@
+{
+  "run_id": "<RUN_ID>",
+  "iteration_id": "<ITERATION_ID>",
+  "location": "local",
+  "sync": {
+    "artifact_sync_to_local": {
+      "status": "pending",
+      "completed_at": null
+    }
+  },
+  "verifier_results": {
+    "env_smoke": "pending",
+    "tests": "skip",
+    "dry_run": "pending"
+  }
+}
